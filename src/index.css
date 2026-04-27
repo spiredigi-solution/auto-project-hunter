@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: 222 15% 15%;
+  --color-foreground: 0 0% 95%;
+  --color-panel: 222 16% 17%;
+  --color-panel-alt: 222 16% 20%;
+  --color-panel-hover: 222 16% 24%;
+  --color-primary: 190 100% 50%;
+  --color-primary-foreground: 0 0% 100%;
+  --color-primary-hover: 190 100% 44%;
+  --color-secondary: 190 70% 30%;
+  --color-secondary-foreground: 0 0% 100%;
+  --color-secondary-hover: 190 70% 36%;
+  --color-accent: 330 74% 55%;
+  --color-accent-foreground: 0 0% 100%;
+  --color-success: 145 63% 45%;
+  --color-success-foreground: 0 0% 100%;
+  --color-warning: 43 100% 50%;
+  --color-warning-foreground: 222 15% 15%;
+  --color-border: 210 4% 25%;
+  --color-ring: 190 100% 50%;
+  --color-muted-foreground: 210 8% 86%;
+  --color-gray-50: 210 10% 98%;
+  --color-gray-100: 210 9% 94%;
+  --color-gray-200: 210 8% 86%;
+  --color-gray-300: 210 7% 72%;
+  --color-gray-400: 210 6% 56%;
+  --color-gray-500: 210 5% 40%;
+  --color-gray-600: 210 4% 32%;
+  --color-gray-700: 210 4% 25%;
+  --color-gray-800: 210 4% 18%;
+  --color-gray-900: 210 4% 10%;
+  --gradient-1: linear-gradient(
+    135deg,
+    hsl(190 100% 50%) 0%,
+    hsl(210 80% 45%) 100%
+  );
+  --gradient-2: linear-gradient(
+    120deg,
+    hsl(330 74% 55%) 0%,
+    hsl(275 73% 45%) 100%
+  );
+  --button-border-gradient: linear-gradient(
+    90deg,
+    hsl(190 100% 50%),
+    hsl(330 74% 55%)
+  );
+  --radius: 0.5rem;
+  --font-sans: "DM Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+.light {
+  --color-background: 210 10% 98%;
+  --color-foreground: 210 4% 10%;
+  --color-panel: 0 0% 100%;
+  --color-panel-alt: 210 9% 94%;
+  --color-panel-hover: 210 8% 86%;
+  --color-border: 210 8% 86%;
+  --color-muted-foreground: 210 5% 40%;
+}
+
+@layer base {
+  html,
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  body {
+    @apply min-h-screen;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  [role="button"]:focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+}
